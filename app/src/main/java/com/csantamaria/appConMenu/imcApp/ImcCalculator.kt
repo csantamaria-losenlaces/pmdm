@@ -10,6 +10,7 @@ import androidx.cardview.widget.CardView
 import com.example.appmensajeria.R
 import com.google.android.material.slider.RangeSlider
 import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
 import kotlin.math.pow
 
 class ImcCalculator : AppCompatActivity() {
@@ -123,7 +124,11 @@ class ImcCalculator : AppCompatActivity() {
     private fun setAge() { tvAge.text = currentAge.toString() }
 
     private fun calculateIMC():Double {
+        val dfs = DecimalFormatSymbols()
+        dfs.decimalSeparator = '.'
+
         val df = DecimalFormat("#.##")
+        df.decimalFormatSymbols = dfs
         val imc = currentWeight / (currentHeight.toDouble() / 100).pow(2.0)
 
         return df.format(imc).toDouble()
