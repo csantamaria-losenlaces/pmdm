@@ -30,4 +30,12 @@
         android:text="Ir a Calculadora IMC"
         android:textSize="25sp"></Button>
 
+    <Button
+        android:id="@+id/btnBoardGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Ir a Board Game"
+        android:textSize="25sp"></Button>
+
 </LinearLayout>
