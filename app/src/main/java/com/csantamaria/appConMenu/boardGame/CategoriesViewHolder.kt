@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat.getColor
 import androidx.recyclerview.widget.RecyclerView
+import com.csantamaria.appConMenu.boardGame.GameCategory.*
 import com.example.appmensajeria.R
 
 class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -15,7 +16,7 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         when (gameCategory) {
 
-            GameCategory.Cooperative -> {
+            Cooperative -> {
                 tvCategoryName.text = "Cooperativos"
                 divider.setBackgroundColor(
                     getColor(
