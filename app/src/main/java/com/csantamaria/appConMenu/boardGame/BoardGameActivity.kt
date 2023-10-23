@@ -2,6 +2,7 @@ package com.csantamaria.appConMenu.boardGame
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.csantamaria.appConMenu.boardGame.GameCategory.*
 import com.example.appmensajeria.R
@@ -22,6 +23,11 @@ class BoardGameActivity : AppCompatActivity() {
         Legacy
     )
 
+    private var games = listOf(
+        Game("Hero Realm", GameCategory.Deckbuilding)
+        // ...
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_board_game)
@@ -38,6 +44,10 @@ class BoardGameActivity : AppCompatActivity() {
     private fun initUI() {
         categoriesAdapter = CategoriesAdapter(categories)
         // gamesAdapter = GamesAdapter(games)
+
+        rvCategories.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        rvCategories.adapter = categoriesAdapter
     }
 
 }
