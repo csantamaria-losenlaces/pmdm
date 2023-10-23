@@ -63,4 +63,11 @@
     <string name="BoardGames">Juegos de mesa</string>
     <string name="categories">Categorías</string>
     <string name="games">Juegos</string>
+    <string name="dialog_add_game">Añade un juego</string>
+    <string name="dialog_newgame_button">Añadir juego</string>
+    <string name="cooperatives">Cooperativos</string>
+    <string name="deckbuilding">Deckbuilding</string>
+    <string name="eurogames">Eurogames</string>
+    <string name="living_card_games">Living Card Games</string>
+    <string name="legacy">Legacy</string>
 </resources>

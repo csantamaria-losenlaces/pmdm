@@ -26,7 +26,7 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                 )
             }
 
-            GameCategory.Deckbuilding -> {
+            Deckbuilding -> {
                 tvCategoryName.text = "Deckbuilding"
                 divider.setBackgroundColor(
                     getColor(
@@ -36,7 +36,7 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                 )
             }
 
-            GameCategory.Euro -> {
+            Euro -> {
                 tvCategoryName.text = "Eurogames"
                 divider.setBackgroundColor(
                     getColor(
@@ -46,7 +46,7 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                 )
             }
 
-            GameCategory.LCG -> {
+            LCG -> {
                 tvCategoryName.text = "LCG"
                 divider.setBackgroundColor(
                     getColor(
@@ -56,7 +56,7 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                 )
             }
 
-            GameCategory.Legacy -> {
+            Legacy -> {
                 tvCategoryName.text = "Legacy"
                 divider.setBackgroundColor(
                     getColor(

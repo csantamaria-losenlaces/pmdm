@@ -1,9 +1,11 @@
 package com.csantamaria.appConMenu.boardGame
 
 sealed class GameCategory (var isSelected: Boolean = true) {
-    object Deckbuilding : GameCategory()
-    object Euro : GameCategory()
-    object LCG : GameCategory()
-    object Cooperative : GameCategory()
-    object Legacy : GameCategory()
+
+    data object Deckbuilding : GameCategory()
+    data object Euro : GameCategory()
+    data object LCG : GameCategory()
+    data object Cooperative : GameCategory()
+    data object Legacy : GameCategory()
+
 }

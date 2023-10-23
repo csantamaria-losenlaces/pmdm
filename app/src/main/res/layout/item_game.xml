@@ -17,7 +17,8 @@
         <CheckBox
             android:id="@+id/cbGame"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"/>
 
         <TextView
             android:id="@+id/tvGame"
