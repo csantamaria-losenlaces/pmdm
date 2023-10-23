@@ -15,8 +15,8 @@ class CategoriesAdapter (private val categories: List<GameCategory>) :
 
     override fun getItemCount(): Int {
         return categories.size
-    // Es posible simplificar este método poniendo:
-    // override fun getItemCount() =  categories.size
+    // Sería posible simplificar este método poniendo:
+    // override fun getItemCount() = categories.size
     }
 
     override fun onBindViewHolder (holder: CategoriesViewHolder, position: Int) {
