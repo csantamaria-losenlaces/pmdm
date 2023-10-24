@@ -35,7 +35,7 @@
             android:id="@+id/rbDeckbuilding"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/bgapp_cooperative_category"
+            android:buttonTint="@color/bgapp_deckbuilding_category"
             android:checked="true"
             android:text="@string/deckbuilding"
             android:textColor="@color/white" />
@@ -44,7 +44,7 @@
             android:id="@+id/rbEurogames"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/bgapp_cooperative_category"
+            android:buttonTint="@color/bgapp_euro_category"
             android:checked="true"
             android:text="@string/eurogames"
             android:textColor="@color/white" />
@@ -53,7 +53,7 @@
             android:id="@+id/rbLCG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/bgapp_cooperative_category"
+            android:buttonTint="@color/bgapp_lcg_category"
             android:checked="true"
             android:text="@string/living_card_games"
             android:textColor="@color/white" />
@@ -62,7 +62,7 @@
             android:id="@+id/rbLegacy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/bgapp_cooperative_category"
+            android:buttonTint="@color/bgapp_legacy_category"
             android:checked="true"
             android:text="@string/legacy"
             android:textColor="@color/white" />
