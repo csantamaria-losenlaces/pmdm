@@ -70,4 +70,6 @@
     <string name="eurogames">Eurogames</string>
     <string name="living_card_games">Living Card Games</string>
     <string name="legacy">Legacy</string>
+    <string name="colorPalette">Paleta de colores</string>
+    <string name="changeColor">Cambiar color</string>
 </resources>
