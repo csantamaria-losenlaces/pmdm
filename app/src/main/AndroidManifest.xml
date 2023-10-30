@@ -13,6 +13,9 @@
         android:theme="@style/Theme._20230926_AppMensajeria"
         tools:targetApi="31">
         <activity
+            android:name="com.csantamaria.appConMenu.colorMixer.ColorMixerActivity"
+            android:exported="false" />
+        <activity
             android:name="com.csantamaria.appConMenu.imcApp.ResultActivity"
             android:exported="true" />
         <activity
@@ -41,9 +44,8 @@
             android:exported="true" />
         <activity
             android:name="com.csantamaria.appConMenu.boardGame.BoardGameActivity"
-            android:theme="@style/Theme.BoardgamesApp"
-            android:exported="false" />
-
+            android:exported="false"
+            android:theme="@style/Theme.BoardgamesApp" />
     </application>
 
 </manifest>
