@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appmensajeria.R
 
-class GamesAdapter(private var games: List<Game>, private val onItemSelected: (Int) -> Unit) :
+class GamesAdapter(var games: List<Game>, private val onItemSelected: (Int) -> Unit) :
 
     RecyclerView.Adapter<GamesViewHolder>() {
 

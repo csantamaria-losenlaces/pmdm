@@ -54,7 +54,7 @@ class BoardGameActivity : AppCompatActivity() {
     }
 
     private fun initUI() {
-        categoriesAdapter = CategoriesAdapter(categories)
+        categoriesAdapter = CategoriesAdapter(categories) {position -> onCategorySelected(position)}
         gamesAdapter = GamesAdapter(games) {position -> onGameSelected(position)} // Le estamos pasando dos parámetros
 
         rvCategories.layoutManager =
@@ -100,6 +100,10 @@ class BoardGameActivity : AppCompatActivity() {
     }
 
     private fun updateGames() {
+        val selectedCategories: List<GameCategory> = categories.filter { it.isSelected }
+        val newGames = games.filter { selectedCategories.contains(it.category) }
+
+        gamesAdapter.games = newGames
         gamesAdapter.notifyDataSetChanged()
     }
 
@@ -111,6 +115,7 @@ class BoardGameActivity : AppCompatActivity() {
     private fun onCategorySelected(position: Int) {
         categories[position].isSelected = !categories[position].isSelected
         categoriesAdapter.notifyItemChanged(position)
+        updateGames()
     }
 
 }
