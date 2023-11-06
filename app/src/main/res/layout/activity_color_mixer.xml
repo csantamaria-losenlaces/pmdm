@@ -90,6 +90,8 @@
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
+    <!--Lo ponemos al final para que se pueda interactuar con él.
+    Los XML se leen de abajo a arriba-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvVertical"
         android:layout_width="0dp"
