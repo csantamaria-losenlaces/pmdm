@@ -72,4 +72,7 @@
     <string name="legacy">Legacy</string>
     <string name="colorPalette">Paleta de colores</string>
     <string name="changeColor">Cambiar color</string>
+    <string name="h1_20">H1 (20%)</string>
+    <string name="h2_50">H2 (50%)</string>
+    <string name="h3_80">H3 (80%)</string>
 </resources>
