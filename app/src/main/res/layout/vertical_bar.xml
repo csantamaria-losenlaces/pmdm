@@ -2,13 +2,13 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/viewContainer"
+    android:id="@+id/cvContainer"
     android:layout_width="75dp"
     android:layout_height="match_parent"
     tools:backgroundTint="#80E91E63">
 
     <TextView
-        android:id="@+id/tvbarName"
+        android:id="@+id/tvBarName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"

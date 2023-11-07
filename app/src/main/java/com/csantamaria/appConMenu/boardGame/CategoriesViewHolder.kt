@@ -13,7 +13,7 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val tvCategoryName: TextView = view.findViewById(R.id.tvCategoryName)
     private val divider: View = view.findViewById(R.id.divider)
-    private val viewContainer: CardView = view.findViewById(R.id.viewContainer)
+    private val viewContainer: CardView = view.findViewById(R.id.cvContainer)
 
     fun render(gameCategory: GameCategory, onItemSelected: (Int) -> Unit) {
 

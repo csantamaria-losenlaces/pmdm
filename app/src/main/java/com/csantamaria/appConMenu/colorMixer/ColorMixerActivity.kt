@@ -17,11 +17,11 @@ class ColorMixerActivity : AppCompatActivity() {
 
     // Parámetros: ID del CardView, Color y Alpha (transparencia)
     private val coloredBars listOf(
-        Color("V1", "White", 20),
-        Color("V2", "Red", 35),
-        Color("V3", "Orange", 50),
-        Color("V4", "Yellow", 65),
-        Color("V5", "Green", 80)
+        ColorBar("V1", "White", 20),
+        ColorBar("V2", "Red", 35),
+        ColorBar("V3", "Orange", 50),
+        ColorBar("V4", "Yellow", 65),
+        ColorBar("V5", "Green", 80)
     )
 
     // Método que se ejecuta al lanzar la aplicación
@@ -42,9 +42,10 @@ class ColorMixerActivity : AppCompatActivity() {
 
     // Inicialización de la interfaz de usuario
     private fun initUI() {
-        colorAdapter = ColorAdapter(coloredBars) { position -> onColorSelected(position)}
+        colorAdapter = ColorAdapter(coloredBars)
 
         rvColors.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
         rvColors.adapter = colorAdapter
     }
 
