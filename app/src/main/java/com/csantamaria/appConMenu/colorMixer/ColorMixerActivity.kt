@@ -1,5 +1,6 @@
 package com.csantamaria.appConMenu.colorMixer
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,12 +17,12 @@ class ColorMixerActivity : AppCompatActivity() {
     private lateinit var colorAdapter: ColorAdapter
 
     // Parámetros: ID del CardView, Color y Alpha (transparencia)
-    private val coloredBars listOf(
-        ColorBar("V1", "White", 20),
-        ColorBar("V2", "Red", 35),
-        ColorBar("V3", "Orange", 50),
-        ColorBar("V4", "Yellow", 65),
-        ColorBar("V5", "Green", 80)
+    private val coloredBars = listOf(
+    ColorBar("V1", Color.parseColor(R.color.cm_white.toString()), 20),
+    ColorBar("V2", Color.parseColor(R.color.cm_red.toString()), 35),
+    ColorBar("V3", Color.parseColor(R.color.cm_orange.toString()), 50),
+    ColorBar("V4", Color.parseColor(R.color.cm_yellow.toString()), 65),
+    ColorBar("V5", Color.parseColor(R.color.cm_green.toString()), 80)
     )
 
     // Método que se ejecuta al lanzar la aplicación
