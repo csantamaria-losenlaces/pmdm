@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.csantamaria.appConMenu.boardGame.BoardGameActivity
+import com.csantamaria.appConMenu.colorMixer.ColorMixerActivity
 import com.csantamaria.appConMenu.helloApp.EscribirTexto
 import com.csantamaria.appConMenu.imcApp.ImcCalculator
 import com.csantamaria.appConMenu.messageApp.EnviarMensaje
@@ -27,6 +28,9 @@ class MenuActivity : AppCompatActivity() {
         val btnBoardGame = findViewById<Button>(R.id.btnBoardGame)
         btnBoardGame.setOnClickListener { (navigateToBoardGame()) }
 
+        val btnColorMixer = findViewById<Button>(R.id.btnColorMixer)
+        btnColorMixer.setOnClickListener { (navigateToColorMixer()) }
+
     }
 
     private fun navigateToHelloApp() {
@@ -46,6 +50,11 @@ class MenuActivity : AppCompatActivity() {
 
     private fun navigateToBoardGame() {
         val intent = Intent(this, BoardGameActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToColorMixer() {
+        val intent = Intent(this, ColorMixerActivity::class.java)
         startActivity(intent)
     }
 

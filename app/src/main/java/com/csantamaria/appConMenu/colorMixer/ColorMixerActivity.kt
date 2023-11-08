@@ -3,7 +3,9 @@ package com.csantamaria.appConMenu.colorMixer
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appmensajeria.R
@@ -16,19 +18,22 @@ class ColorMixerActivity : AppCompatActivity() {
 
     private lateinit var colorAdapter: ColorAdapter
 
-    // Parámetros: ID del CardView, Color y Alpha (transparencia)
-    private val coloredBars = listOf(
-    ColorBar("V1", Color.parseColor(R.color.cm_white.toString()), 20),
-    ColorBar("V2", Color.parseColor(R.color.cm_red.toString()), 35),
-    ColorBar("V3", Color.parseColor(R.color.cm_orange.toString()), 50),
-    ColorBar("V4", Color.parseColor(R.color.cm_yellow.toString()), 65),
-    ColorBar("V5", Color.parseColor(R.color.cm_green.toString()), 80)
-    )
+    private lateinit var coloredBars: List<ColorBar>
 
     // Método que se ejecuta al lanzar la aplicación
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_color_mixer)
+
+        // Parámetros: ID del CardView, Color y Alpha (transparencia)
+        coloredBars = listOf(
+            //ColorBar("V1", Integer.toHexString(ContextCompat.getColor(this, R.color.cm_red)), 20),
+            ColorBar("V1", ContextCompat.getColor(this, R.color.cm_red), 20)
+            /*ColorBar("V2", "5E35B1", 35),
+            ColorBar("V3", "D81B21", 50),
+            ColorBar("V4", "FDD835", 65),
+            ColorBar("V5", "00897B", 80)*/
+        )
 
         initComponents()
         initUI()
@@ -44,9 +49,7 @@ class ColorMixerActivity : AppCompatActivity() {
     // Inicialización de la interfaz de usuario
     private fun initUI() {
         colorAdapter = ColorAdapter(coloredBars)
-
-        rvColors.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-
+        rvColors.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         rvColors.adapter = colorAdapter
     }
 
