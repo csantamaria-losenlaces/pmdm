@@ -1,7 +1,5 @@
 package com.csantamaria.appConMenu.colorMixer
 
-import android.graphics.Color
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -17,29 +15,24 @@ class ColorBarViewHolder (view: View) : RecyclerView.ViewHolder(view) {
 
         when (colorBar.idCV) {
             "V1" -> {
-                //cvContainer.setBackgroundColor(Color.parseColor("#" + colorBar.alpha + Integer.toHexString(colorBar.color)))
-                cvContainer.setBackgroundColor(Color.parseColor(String.format("#%02X%06X", colorBar.alpha, colorBar.color)))
-                tvBarName.text = "V1 " + "(" + colorBar.alpha + "%)"
+                cvContainer.setBackgroundColor(colorBar.color)
+                tvBarName.text = "V1 (20%)"
             }
             "V2" -> {
-                val v2Color: String = "#" + Integer.toHexString(colorBar.alpha) + colorBar.color
-                cvContainer.setBackgroundColor(Color.parseColor(v2Color))
-                tvBarName.text = "V2 " + "(" + colorBar.alpha + "%)"
+                cvContainer.setBackgroundColor(colorBar.color)
+                tvBarName.text = "V2 (35%)"
             }
             "V3" -> {
-                val v3Color: String = "#" + Integer.toHexString(colorBar.alpha) + colorBar.color
-                cvContainer.setBackgroundColor(Color.parseColor(v3Color))
-                tvBarName.text = "V3 " + "(" + colorBar.alpha + "%)"
+                cvContainer.setBackgroundColor(colorBar.color)
+                tvBarName.text = "V3 (50%)"
             }
             "V4" -> {
-                val v4Color: String = "#" + Integer.toHexString(colorBar.alpha) + colorBar.color
-                cvContainer.setBackgroundColor(Color.parseColor(v4Color))
-                tvBarName.text = "V4 " + "(" + colorBar.alpha + "%)"
+                cvContainer.setBackgroundColor(colorBar.color)
+                tvBarName.text = "V4 (65%)"
             }
             "V5" -> {
-                val v5Color: String = "#" + Integer.toHexString(colorBar.alpha) + colorBar.color
-                cvContainer.setBackgroundColor(Color.parseColor(v5Color))
-                tvBarName.text = "V5 " + "(" + colorBar.alpha + "%)"
+                cvContainer.setBackgroundColor(colorBar.color)
+                tvBarName.text = "V5 (80%)"
             }
         }
 

@@ -1,11 +1,10 @@
 package com.csantamaria.appConMenu.colorMixer
 
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import androidx.core.content.ContextCompat
+import android.widget.RadioGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appmensajeria.R
@@ -25,14 +24,13 @@ class ColorMixerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_color_mixer)
 
-        // Parámetros: ID del CardView, Color y Alpha (transparencia)
+        // Parámetros: ID del CardView (String) y color (int)
         coloredBars = listOf(
-            //ColorBar("V1", Integer.toHexString(ContextCompat.getColor(this, R.color.cm_red)), 20),
-            ColorBar("V1", ContextCompat.getColor(this, R.color.cm_red), 20)
-            /*ColorBar("V2", "5E35B1", 35),
-            ColorBar("V3", "D81B21", 50),
-            ColorBar("V4", "FDD835", 65),
-            ColorBar("V5", "00897B", 80)*/
+            ColorBar("V1", -871890688),
+            ColorBar("V2", -1509921024),
+            ColorBar("V3", -1131230976),
+            ColorBar("V4", -1509883935),
+            ColorBar("V5", -858717953)
         )
 
         initComponents()
@@ -42,8 +40,8 @@ class ColorMixerActivity : AppCompatActivity() {
 
     // Inicialización de los componentes de la aplicación
     private fun initComponents() {
-        rvColors = findViewById<RecyclerView>(R.id.rvVertical)
-        btnChangeColor = findViewById<Button>(R.id.btnChangeColor)
+        rvColors = findViewById(R.id.rvVertical)
+        btnChangeColor = findViewById(R.id.btnChangeColor)
     }
 
     // Inicialización de la interfaz de usuario
@@ -59,12 +57,23 @@ class ColorMixerActivity : AppCompatActivity() {
     }
 
     private fun showDialog() {
-        TODO("Pendiente de implementar")
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.dialog_color)
+
+        val btnApplyColor: Button = dialog.findViewById(R.id.btnApplyColor)
+        val rgBars: RadioGroup = dialog.findViewById(R.id.rgBars)
+        val rgColors: RadioGroup = dialog.findViewById(R.id.rgColors)
+
+        btnApplyColor.setOnClickListener {
+            updateColors(rgBars.checkedRadioButtonId, rgColors.checkedRadioButtonId)
+            dialog.hide()
+        }
+
+        dialog.show()
     }
 
-    private fun updateColors() {
+    private fun updateColors(selectedBarId: Int, selectedColorId: Int) {
         TODO("Pendiente de implementar")
     }
-
 
 }
