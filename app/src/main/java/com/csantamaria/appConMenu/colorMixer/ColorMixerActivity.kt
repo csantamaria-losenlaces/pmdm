@@ -2,12 +2,15 @@ package com.csantamaria.appConMenu.colorMixer
 
 import android.app.Dialog
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appmensajeria.R
+
 
 class ColorMixerActivity : AppCompatActivity() {
 
@@ -15,7 +18,7 @@ class ColorMixerActivity : AppCompatActivity() {
     private lateinit var rvColors: RecyclerView
     private lateinit var btnChangeColor: Button
 
-    private lateinit var colorAdapter: ColorAdapter
+    private lateinit var colorBarAdapter: ColorBarAdapter
 
     private lateinit var coloredBars: List<ColorBar>
 
@@ -26,11 +29,11 @@ class ColorMixerActivity : AppCompatActivity() {
 
         // Parámetros: ID del CardView (String) y color (int)
         coloredBars = listOf(
-            ColorBar("V1", -871890688),
-            ColorBar("V2", -1509921024),
-            ColorBar("V3", -1131230976),
-            ColorBar("V4", -1509883935),
-            ColorBar("V5", -858717953)
+            ColorBar("V1 (20%)", -871890688),
+            ColorBar("V2 (35%)", -1509921024),
+            ColorBar("V3 (50%)", -1131230976),
+            ColorBar("V4 (65%)", -1509883935),
+            ColorBar("V5 (80%)", -858717953)
         )
 
         initComponents()
@@ -46,9 +49,9 @@ class ColorMixerActivity : AppCompatActivity() {
 
     // Inicialización de la interfaz de usuario
     private fun initUI() {
-        colorAdapter = ColorAdapter(coloredBars)
+        colorBarAdapter = ColorBarAdapter(coloredBars)
         rvColors.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        rvColors.adapter = colorAdapter
+        rvColors.adapter = colorBarAdapter
     }
 
     // Inicialización de los métodos de detección de eventos
@@ -65,15 +68,23 @@ class ColorMixerActivity : AppCompatActivity() {
         val rgColors: RadioGroup = dialog.findViewById(R.id.rgColors)
 
         btnApplyColor.setOnClickListener {
-            updateColors(rgBars.checkedRadioButtonId, rgColors.checkedRadioButtonId)
+            val rbSelectedBarId: Int = rgBars.checkedRadioButtonId
+            val rbSelectedBar: RadioButton = rgBars.findViewById(rbSelectedBarId)
+            val rbSelectedBarText: String = rbSelectedBar.text.toString()
+
+            val rbSelectedColorId: Int = rgColors.checkedRadioButtonId
+            val rbSelectedColor: RadioButton = rgColors.findViewById(rbSelectedColorId)
+            val rbSelectedColorText: String = rbSelectedColor.text.toString()
+
+            updateColors(rbSelectedBarText, rbSelectedColorText)
             dialog.hide()
         }
 
         dialog.show()
     }
 
-    private fun updateColors(selectedBarId: Int, selectedColorId: Int) {
-        TODO("Pendiente de implementar")
+    private fun updateColors(selectedBar: String, selectedColor: String) {
+        Log.i("Solicitud cambio color", "Se quiere cambiar " + selectedBar + " a " + selectedColor)
     }
 
 }

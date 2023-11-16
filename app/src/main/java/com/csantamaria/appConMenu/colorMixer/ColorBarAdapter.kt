@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appmensajeria.R
 
-class ColorAdapter(private val coloredBars: List<ColorBar>) :
+class ColorBarAdapter(private val coloredBars: List<ColorBar>) :
     RecyclerView.Adapter<ColorBarViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
