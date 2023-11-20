@@ -35,6 +35,7 @@
     <color name="bgapp_legacy_category">#EDF351</color>
 
     <!--ColorMixer-->
+    <!-- Alpha 100% -->
     <color name="cm_white">#FFFFFF</color>
     <color name="cm_red">#D81B21</color>
     <color name="cm_orange">#FB8C00</color>
@@ -44,5 +45,60 @@
     <color name="cm_blue">#1E88E5</color>
     <color name="cm_purple">#4A148C</color>
     <color name="cm_black">#000000</color>
+
+    <!-- Alpha 80% -->
+    <color name="cm_white_80">#CCFFFFFF</color>
+    <color name="cm_red_80">#CCD81B21</color>
+    <color name="cm_orange_80">#CCFB8C00</color>
+    <color name="cm_yellow_80">#CCFDD835</color>
+    <color name="cm_green_80">#CC43A047</color>
+    <color name="cm_cyan_80">#CC00897B</color>
+    <color name="cm_blue_80">#CC1E88E5</color>
+    <color name="cm_purple_80">#CC4A148C</color>
+    <color name="cm_black_80">#CC000000</color>
+
+    <!-- Alpha 65% -->
+    <color name="cm_white_65">#A6FFFFFF</color>
+    <color name="cm_red_65">#A6D81B21</color>
+    <color name="cm_orange_65">#A6FB8C00</color>
+    <color name="cm_yellow_65">#A6FDD835</color>
+    <color name="cm_green_65">#A643A047</color>
+    <color name="cm_cyan_65">#A600897B</color>
+    <color name="cm_blue_65">#A61E88E5</color>
+    <color name="cm_purple_65">#A64A148C</color>
+    <color name="cm_black_65">#A6000000</color>
+
+    <!-- Alpha 50% -->
+    <color name="cm_white_50">#80FFFFFF</color>
+    <color name="cm_red_50">#80D81B21</color>
+    <color name="cm_orange_50">#80FB8C00</color>
+    <color name="cm_yellow_50">#80FDD835</color>
+    <color name="cm_green_50">#8043A047</color>
+    <color name="cm_cyan_50">#8000897B</color>
+    <color name="cm_blue_50">#801E88E5</color>
+    <color name="cm_purple_50">#804A148C</color>
+    <color name="cm_black_50">#80000000</color>
+
+    <!-- Alpha 35% -->
+    <color name="cm_white_35">#59FFFFFF</color>
+    <color name="cm_red_35">#59D81B21</color>
+    <color name="cm_orange_35">#59FB8C00</color>
+    <color name="cm_yellow_35">#59FDD835</color>
+    <color name="cm_green_35">#5943A047</color>
+    <color name="cm_cyan_35">#5900897B</color>
+    <color name="cm_blue_35">#591E88E5</color>
+    <color name="cm_purple_35">#594A148C</color>
+    <color name="cm_black_35">#59000000</color>
+
+    <!-- Alpha 20% -->
+    <color name="cm_white_20">#33FFFFFF</color>
+    <color name="cm_red_20">#33D81B21</color>
+    <color name="cm_orange_20">#33FB8C00</color>
+    <color name="cm_yellow_20">#33FDD835</color>
+    <color name="cm_green_20">#3343A047</color>
+    <color name="cm_cyan_20">#3300897B</color>
+    <color name="cm_blue_20">#331E88E5</color>
+    <color name="cm_purple_20">#334A148C</color>
+    <color name="cm_black_20">#33000000</color>
 
 </resources>
