@@ -75,4 +75,10 @@
     <string name="h1_20">H1 (20%)</string>
     <string name="h2_50">H2 (50%)</string>
     <string name="h3_80">H3 (80%)</string>
+    <string name="helloapp">HelloApp</string>
+    <string name="mensajeria">Mensajería</string>
+    <string name="calculadora_imc">Calculadora IMC</string>
+    <string name="juegos_de_mesa">Juegos de mesa</string>
+    <string name="mezclador_de_colores">Mezclador de colores</string>
+    <string name="superhero">Superhero</string>
 </resources>

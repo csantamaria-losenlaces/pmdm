@@ -11,39 +11,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="HelloApp"
-        android:textSize="25sp"></Button>
+        android:text="@string/helloapp"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/btnMensajeria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Mensajería"
-        android:textSize="25sp"></Button>
+        android:text="@string/mensajeria"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/btnImc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Calculadora IMC"
-        android:textSize="25sp"></Button>
+        android:text="@string/calculadora_imc"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/btnBoardGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Juegos de mesa"
-        android:textSize="25sp"></Button>
+        android:text="@string/juegos_de_mesa"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/btnColorMixer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Mezclador de colores"
-        android:textSize="25sp"></Button>
+        android:text="@string/mezclador_de_colores"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnSuperhero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/superhero"
+        android:textSize="25sp" />
 
 </LinearLayout>
