@@ -1,9 +1,12 @@
 package com.csantamaria.appConMenu.superhero
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appmensajeria.databinding.ActivitySuperheroListBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -17,6 +20,12 @@ class SuperheroListActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySuperheroListBinding
     private lateinit var retrofit: Retrofit
 
+    private lateinit var adapter: SuperheroAdapter
+
+    companion object {
+        const val EXTRA_ID = "extra_id"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySuperheroListBinding.inflate(layoutInflater)
@@ -25,6 +34,12 @@ class SuperheroListActivity : AppCompatActivity() {
         retrofit = getRetrofit()
 
         initUI()
+    }
+
+    private fun navigateToDetail(id: String) {
+        val intent = Intent(this, DetailSuperheroActivity::class.java)
+        intent.putExtra(EXTRA_ID, id)
+        startActivity(intent)
     }
 
     private fun initUI() {
@@ -36,14 +51,28 @@ class SuperheroListActivity : AppCompatActivity() {
 
             override fun onQueryTextChange(newText: String?) = false
         })
+
+        adapter = SuperheroAdapter { superheroId ->  navigateToDetail(superheroId) }
+        binding.rvSuperhero.setHasFixedSize(true)
+        binding.rvSuperhero.layoutManager = LinearLayoutManager(this)
+        binding.rvSuperhero.adapter = adapter
     }
 
     private fun searchByName(query: String) {
+        binding.progressBar.isVisible = true
         CoroutineScope(Dispatchers.IO).launch {
             val myResponse: Response<SuperheroDataResponse> =
                 retrofit.create(ApiService::class.java).getSuperheroes(query)
             if (myResponse.isSuccessful) {
                 Log.i("Consulta", "Funciona :)")
+                val response: SuperheroDataResponse? = myResponse.body()
+                if (response != null) {
+                    Log.i("Cuerpo de la consulta", response.toString())
+                    runOnUiThread {
+                        adapter.updateList(response.superheroes)
+                        binding.progressBar.isVisible = false
+                    }
+                }
             } else {
                 Log.i("Consulta", "No funciona :(")
             }
