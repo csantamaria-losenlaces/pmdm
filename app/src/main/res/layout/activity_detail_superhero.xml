@@ -70,49 +70,49 @@
                     android:id="@+id/viewIntelligence"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:background="@color/superhero_stat_intelligence"
                     android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:background="@color/superhero_stat_intelligence" />
 
                 <View
                     android:id="@+id/viewStrength"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:background="@color/superhero_stat_strength"
                     android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:background="@color/superhero_stat_strength" />
 
                 <View
                     android:id="@+id/viewSpeed"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:background="@color/superhero_stat_speed"
                     android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:background="@color/superhero_stat_speed" />
 
                 <View
                     android:id="@+id/viewDurability"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:background="@color/superhero_stat_durability"
                     android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:background="@color/superhero_stat_durability" />
 
                 <View
                     android:id="@+id/viewPower"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:background="@color/superhero_stat_power"
                     android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:background="@color/superhero_stat_power" />
 
                 <View
                     android:id="@+id/viewCombat"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:background="@color/superhero_stat_combat"
                     android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:background="@color/superhero_stat_combat" />
 
             </LinearLayout>
 
@@ -190,6 +190,23 @@
                     android:gravity="center"/>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Relatives"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="28sp"/>
+
+            <TextView
+                android:id="@+id/tvConnections"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:text="Aquí van los parientes del superhéroe..."
+                android:layout_margin="14dp"/>
 
         </LinearLayout>
 

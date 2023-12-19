@@ -7,7 +7,8 @@ import com.example.appmensajeria.R
 
 class SuperheroAdapter(
     var superheroList: List<SuperheroItemResponse> = emptyList(),
-    private val navigateToDetailActivity: (String) -> Unit) :
+    private val navigateToDetailActivity: (String) -> Unit
+) :
     RecyclerView.Adapter<SuperheroViewHolder>() {
 
     fun updateList(list: List<SuperheroItemResponse>) {
