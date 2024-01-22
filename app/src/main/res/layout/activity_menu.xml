@@ -54,4 +54,12 @@
         android:text="@string/superhero"
         android:textSize="25sp" />
 
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/settings"
+        android:textSize="25sp" />
+
 </LinearLayout>

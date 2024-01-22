@@ -81,4 +81,15 @@
     <string name="juegos_de_mesa">Juegos de mesa</string>
     <string name="mezclador_de_colores">Mezclador de colores</string>
     <string name="superhero">Superhero</string>
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="dark_mode_desc">Activa el modo oscuro para un cambio visual</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="bluetooth_desc">Conecta periféricos sin cables</string>
+    <string name="volume">Volumen</string>
+    <string name="vibration_desc">Vibrar en las llamadas</string>
+    <string name="dark_mode_accesibility_desc">A moon icon representing the dark mode toggle setting</string>
+    <string name="bluetooth_accesibility_desc">A Bluetooth icon representing the Bluetooth toggle setting</string>
+    <string name="volume_accesibility_desc">A speaker icon representing the volume slider setting</string>
+    <string name="vibration_accesibility_desc">A vibrating phone icon representing the vibration toggle setting</string>
 </resources>

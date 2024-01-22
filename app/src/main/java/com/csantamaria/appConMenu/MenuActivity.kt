@@ -9,6 +9,7 @@ import com.csantamaria.appConMenu.colorMixer.ColorMixerActivity
 import com.csantamaria.appConMenu.helloApp.EscribirTexto
 import com.csantamaria.appConMenu.imcApp.ImcCalculator
 import com.csantamaria.appConMenu.messageApp.EnviarMensaje
+import com.csantamaria.appConMenu.settings.SettingsActivity
 import com.csantamaria.appConMenu.superhero.SuperheroListActivity
 import com.example.appmensajeria.R
 
@@ -34,6 +35,9 @@ class MenuActivity : AppCompatActivity() {
 
         val btnSuperhero = findViewById<Button>(R.id.btnSuperhero)
         btnSuperhero.setOnClickListener { (navigateToSuperhero()) }
+
+        val btnSettings = findViewById<Button>(R.id.btnSettings)
+        btnSettings.setOnClickListener { (navigateToSettings()) }
 
     }
 
@@ -64,6 +68,11 @@ class MenuActivity : AppCompatActivity() {
 
     private fun navigateToSuperhero() {
         val intent = Intent(this, SuperheroListActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToSettings() {
+        val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
     }
 
